@@ -69,7 +69,9 @@ Ghost **16 Windows ଦୃଢ଼ୀକରଣ କାର୍ଯ୍ୟ** ପ୍ଲସ
 ### ସୁରକ୍ଷା ମୂଲ୍ୟାଙ୍କନ
 ```powershell
 # Ghost ମଡ୍ୟୁଲ୍ ଲୋଡ୍ କରନ୍ତୁ
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # ସାମ୍ପ୍ରତିକ ସୁରକ୍ଷା ସ୍ଥିତି ଯାଞ୍ଚ କରନ୍ତୁ
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### ବିକଳ୍ପ 1: ସିଧା ଡାଉନଲୋଡ୍ (ପରୀକ୍ଷା)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### ବିକଳ୍ପ 2: ମଡ୍ୟୁଲ୍ ସ୍ଥାପନା
